@@ -1,0 +1,407 @@
+$text-color: #636363;
+$title-color: #494949;
+$light-color: #FFFFFF;
+$side-color: #d8d8d8;
+/* Modal Popup */
+#modalPopup {
+	display: none;
+
+	position: relative;
+
+	background-color: white;
+	border: 0px solid white;
+	border-radius: 2px;
+
+	width: 93vw;
+	height: 93vh;
+	overflow: scroll;
+	overflow-x: hidden;
+
+	margin: 0 auto;
+
+}
+
+::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+#modalPopup .modal_close {
+	position: fixed;
+	top: 25px;
+	right: 15px;
+	width: 20px;
+	svg .X{
+		fill: white;
+	}
+	svg:hover .X {
+			fill: grey;
+	}
+}
+
+#modalPopup .projectSide {
+	width: 70vw;
+}
+
+#modalPopup .projectHead {
+	align-self: flex-start;
+	width: 70vw;
+	background-color: #f2f2f2;
+	padding: 15px 50px;
+
+	.cat{
+		color: $text-color;
+		font-weight: lighter;
+		font-size: 11px;
+		padding-bottom: 2px;
+		font-family: 'Open Sans', sans-serif;
+	}
+
+	// .org{
+	// 	font-weight: lighter;
+	// 	font-style: italic;
+	// 	font-size: 10px;
+	// }
+
+	.title{
+		font-weight: bolder;
+		font-size: 20px;
+		margin-top: 0px;
+		margin-bottom: 8px;
+		font-family: 'Quattrocento', serif;
+		color: $title-color;
+	}
+
+	.summary{
+		color: $text-color;
+		font-weight: normal;
+		font-size: 14px;
+		margin-right: 20vw;
+		line-height: 1.4em;
+	}
+
+}
+
+#modalPopup .projectDetails {
+	// .mainImg {
+	// 	position: relative;
+	// 	margin-top: 15px;
+	// 	margin-bottom: 30px;
+	// 	width: 200px;
+	// 	padding-top: 200px; /*to set the same as width, because height: 100% isn't working */
+  //
+	// 	background-position: center;
+	// 	background-repeat: no-repeat;
+	// 	background-size: 90%;
+  //
+	// 	margin: 0 auto;
+	// }
+
+
+}
+#modalPopup .projectImages {
+	.imgDiv {
+		position: relative;
+		height: 550px;
+		margin-top: 1.5px;
+		margin-bottom: 1.5px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+
+		//adjust the text location
+		display: flex;
+		flex-direction: column-reverse;
+
+	}
+
+	// .imgDiv:hover .imgTxt{
+	// 	visibility: visible;
+	// 	opacity: 1;
+	// }
+
+	.imgTxt {
+		// visibility: hidden;
+		// opacity: 0;
+		// transition: visibility 0.5s, opacity 0.5s linear;
+
+		background: rgba(0, 0, 0, .7);
+		color: #f2f2f2;
+		padding: 25px 70px;
+		font-size: 14px;
+		line-height: 1.4em;
+
+		//asdf
+	}
+}
+
+#modalPopup .projectInfo {
+	background-color: $light-color;
+	padding: 10px 0px;
+
+	h1{
+		color: $title-color;
+		padding: 10px 70px 2px 70px;
+		margin-bottom: 0;
+		font-size: 25px;
+		font-family: 'Quattrocento', serif;
+
+	}
+	p{
+		color: $text-color;
+		font-weight: 400;
+		padding: 0 70px;
+		line-height: 1.6em;
+		font-size: 14px;
+	}
+
+	hr{
+		margin: 0 70px;
+
+		padding-bottom: 15px;
+		display: block;
+		width: 15vw;
+		height: 1px;
+		border: 0;
+		border-top: 1px solid $side-color;
+	}
+
+}
+
+#modalPopup .devSide {
+	position: fixed;
+	width: 23vw;
+	height: 44.8vw;
+	overflow: scroll;
+
+	background-color: white;
+	color: $text-color;
+	border-left:1px solid $side-color;
+
+
+	right: 0;
+	margin-right: 3.5vw;
+
+	h1{
+		padding: 10px 30px 0 30px;
+		margin: 0;
+		font-size: 14px;
+		font-weight: 400;
+		color: $title-color;
+	}
+
+	hr{
+		display: block;
+		width: 8vw;
+		height: 1px;
+		border: 0;
+		border-top: 1px solid $side-color;
+		margin: 0 30px;
+		padding: 0 0 10px 0;
+	}
+
+	.team .mentor_team{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: 0;
+		//border-bottom: 1px solid $side-color;
+	}
+
+	.devs{
+		padding: 0px 30px 10px 30px;
+		width: 22.5vw;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin: 0.5em;
+	}
+
+	.mentor_devs {
+		padding: 0px 30px 10px 30px;
+		width: 22.5vw;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		margin: 0.5em;
+	}
+
+
+
+	.devPic {
+		width: 60px;
+		height: 60px;
+		background-size: cover;
+		background-repeat: no-repeat;
+		margin-right: 30px;
+		border-radius: 50%;
+	}
+
+	.devOverlay{
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+
+		.devName {
+			font-family: 'Open San', sans-serif;
+			font-weight: 400;
+			font-size: 16px;
+			color: $title-color;
+		}
+
+		.devContact {
+			font-size: 13px;
+		}
+	}
+
+
+  //
+	// .org_published {
+	// 	padding: 1.5em 2em;
+	// 	border: 0;
+	// 	border-bottom: 1px solid $side-color;
+  //
+	// 	.org {
+	// 		font-weight: 400;
+	// 		font-size: 14px;
+	// 		margin-bottom: 1em;
+	// 	}
+  //
+	// 	.published {
+	// 		font-weight: lighter;
+	// 		font-size: 12px;
+	// 	}
+	// }
+}
+
+#modalPopup footer {
+	border-top:1px solid $side-color;
+	height: 5vw;
+	width: 70vw;
+	padding: 10px 70px;
+	background-color: #f2f2f2;
+
+	.published {
+		font-weight: lighter;
+		font-size: 12px;
+		margin-bottom: 5px;
+	}
+
+	.gDrive {
+		font-size: 14px;
+		&:hover {
+			color: #777777;
+		}
+	}
+
+}
+
+#lean_overlay {
+    position: fixed;
+    z-index:300;
+    top: 0px;
+    left: 0px;
+    height:100%;
+    width:100%;
+    background: #000;
+    display: none;
+		cursor: zoom-out;
+}
+
+//Media Queries!!! Need for responsive window size
+// #modalPopup .name {
+// 	line-height: 1.35em;
+// 	font-size: 1.3em;
+//
+// 	color: #241F59;
+// 	border-bottom: solid 1px #241F59;
+// }
+// #modalPopup .bio {
+// 	margin-top: 15px;
+// 	margin-bottom: 10px;
+// }
+// #modalPopup .bio a {
+// 	color: #241F59;
+// 	border-bottom: 1px #241F59 solid;
+// }
+//
+//
+// @media (min-width: 1200px) {
+// 	#modalPopup .name:hover {
+// 		color: #FFD400;
+// 		border-bottom: solid 1px #FFD400;
+// 	}
+// }
+//
+// @media (min-width: 600px) {
+// 	#modalPopup .personImg-border {
+// 		width: 300px;
+// 	}
+// 	#modalPopup .personImg {
+// 		width: 300px;
+// 		padding-top: 300px; /*to set the same as width, because height: 100% isn't working */
+// 	}
+// }
+//
+// @media (min-width: 1200px) {
+// 	#modalPopup .modal_close svg .X {
+// 		-webkit-transition: 0.2s all;
+// 		transition: 0.2s all;
+// 	}
+
+// }
+
+// @media (min-width: 1200px) {
+// 	#modalPopup .bio a:hover {
+// 		color: #FFD400;
+// 		border-bottom: 1px #FFD400 solid;
+// 	}
+// }
+
+
+// Modal desktop
+// @media (min-width: 1200px) {
+// 	#modalPopup {
+// 		width: 1200px;
+// 	}
+//
+// 	#modalPopup .imgDiv {
+// 		float: left;
+// 		margin-bottom: 0;
+// 	}
+
+	// #modalPopup .textDiv {
+	// 	float: right;
+	// 	width: calc(100% - 330px);
+  //
+	// 	margin-top: 15px;
+	// 	margin-bottom: 15px;
+	// 	max-height: 60vh;
+	// 	min-height: 300px;
+	// 	overflow: scroll;
+	// }
+
+	// #modalPopup .personImg-border {
+	// 	width: 300px;
+	// }
+	// #modalPopup .personImg {
+	// 	width: 300px;
+	// 	padding-top: 300px; /*to set the same as width, because height: 100% isn't working */
+	// }
+//}
+
+
+/*#modalPopup .personImg-border {
+	width: 200px;
+
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+
+	z-index: 1;
+
+	pointer-events: none;
+}
+*/

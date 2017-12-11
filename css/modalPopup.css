@@ -1,0 +1,202 @@
+/* Modal Popup */
+#modalPopup {
+  display: none;
+  position: relative;
+  background-color: white;
+  border: 0px solid white;
+  border-radius: 2px;
+  width: 93vw;
+  height: 93vh;
+  overflow: scroll;
+  overflow-x: hidden;
+  margin: 0 auto; }
+
+::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */ }
+
+#modalPopup .modal_close {
+  position: fixed;
+  top: 25px;
+  right: 15px;
+  width: 20px; }
+  #modalPopup .modal_close svg .X {
+    fill: white; }
+  #modalPopup .modal_close svg:hover .X {
+    fill: grey; }
+
+#modalPopup .projectSide {
+  width: 70vw; }
+
+#modalPopup .projectHead {
+  align-self: flex-start;
+  width: 70vw;
+  background-color: #f2f2f2;
+  padding: 15px 50px; }
+  #modalPopup .projectHead .cat {
+    color: #636363;
+    font-weight: lighter;
+    font-size: 11px;
+    padding-bottom: 2px;
+    font-family: 'Open Sans', sans-serif; }
+  #modalPopup .projectHead .title {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+    font-family: 'Quattrocento', serif;
+    color: #494949; }
+  #modalPopup .projectHead .summary {
+    color: #636363;
+    font-weight: normal;
+    font-size: 14px;
+    margin-right: 20vw;
+    line-height: 1.4em; }
+
+#modalPopup .projectImages .imgDiv {
+  position: relative;
+  height: 550px;
+  margin-top: 1.5px;
+  margin-bottom: 1.5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column-reverse; }
+#modalPopup .projectImages .imgTxt {
+  background: rgba(0, 0, 0, 0.7);
+  color: #f2f2f2;
+  padding: 25px 70px;
+  font-size: 14px;
+  line-height: 1.4em; }
+
+#modalPopup .projectInfo {
+  background-color: #FFFFFF;
+  padding: 10px 0px; }
+  #modalPopup .projectInfo h1 {
+    color: #494949;
+    padding: 10px 70px 2px 70px;
+    margin-bottom: 0;
+    font-size: 25px;
+    font-family: 'Quattrocento', serif; }
+  #modalPopup .projectInfo p {
+    color: #636363;
+    font-weight: 400;
+    padding: 0 70px;
+    line-height: 1.6em;
+    font-size: 14px; }
+  #modalPopup .projectInfo hr {
+    margin: 0 70px;
+    padding-bottom: 15px;
+    display: block;
+    width: 15vw;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #d8d8d8; }
+
+#modalPopup .devSide {
+  position: fixed;
+  width: 23vw;
+  height: 44.8vw;
+  overflow: scroll;
+  background-color: white;
+  color: #636363;
+  border-left: 1px solid #d8d8d8;
+  right: 0;
+  margin-right: 3.5vw; }
+  #modalPopup .devSide h1 {
+    padding: 10px 30px 0 30px;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+    color: #494949; }
+  #modalPopup .devSide hr {
+    display: block;
+    width: 8vw;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #d8d8d8;
+    margin: 0 30px;
+    padding: 0 0 10px 0; }
+  #modalPopup .devSide .team .mentor_team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 0; }
+  #modalPopup .devSide .devs {
+    padding: 0px 30px 10px 30px;
+    width: 22.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5em; }
+  #modalPopup .devSide .mentor_devs {
+    padding: 0px 30px 10px 30px;
+    width: 22.5vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0.5em; }
+  #modalPopup .devSide .devPic {
+    width: 60px;
+    height: 60px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-right: 30px;
+    border-radius: 50%; }
+  #modalPopup .devSide .devOverlay {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    #modalPopup .devSide .devOverlay .devName {
+      font-family: 'Open San', sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: #494949; }
+    #modalPopup .devSide .devOverlay .devContact {
+      font-size: 13px; }
+
+#modalPopup footer {
+  border-top: 1px solid #d8d8d8;
+  height: 5vw;
+  width: 70vw;
+  padding: 10px 70px;
+  background-color: #f2f2f2; }
+  #modalPopup footer .published {
+    font-weight: lighter;
+    font-size: 12px;
+    margin-bottom: 5px; }
+  #modalPopup footer .gDrive {
+    font-size: 14px; }
+    #modalPopup footer .gDrive:hover {
+      color: #777777; }
+
+#lean_overlay {
+  position: fixed;
+  z-index: 300;
+  top: 0px;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  display: none;
+  cursor: zoom-out; }
+
+/*#modalPopup .personImg-border {
+	width: 200px;
+
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+
+	z-index: 1;
+
+	pointer-events: none;
+}
+*/
+
+/*# sourceMappingURL=modalPopup.css.map */
